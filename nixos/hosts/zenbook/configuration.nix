@@ -6,9 +6,16 @@
     ../../modules
   ];
 
+  services.displayManager.ly = {
+    enable = true;
+    extraConfig = ''
+      [keyboard]
+      layout = us
+    '';
+  };
+
   programs.hyprland = {
     enable = true;
-    withUWSM = true;
     xwayland.enable = true;
   };
 
