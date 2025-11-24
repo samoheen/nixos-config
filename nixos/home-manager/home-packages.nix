@@ -5,8 +5,7 @@
 
   home.packages = with pkgs; [
     fastfetch
+    unzip
+    zip
   ];
-
-  programs.kitty.enable = true;
-  wayland.windowManager.hyprland.enable = true;
 }
