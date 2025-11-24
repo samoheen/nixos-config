@@ -9,12 +9,14 @@
   services.greetd = {
     enable = true;
     settings = {
-      command = "Hyprland";
-      user = "${user}";
-    };
-    default_session = {
-      command = "{${pkgs.greetd.tuigreet}/bin/tuigreet} --greeting 'Welcome to NixOS' --asterisks --remember --remember-user-session --time -cmd Hyprland ";
-      user = "greeter";
+      initial_session = {
+        command = "Hyprland";
+        user = "${user}";
+      };
+      default_session = {
+        command = "{${pkgs.greetd.tuigreet}/bin/tuigreet} --greeting 'Welcome to NixOS' --asterisks --remember --remember-user-session --time -cmd Hyprland ";
+        user = "greeter";
+      };
     };
   };
 
