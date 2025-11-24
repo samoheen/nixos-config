@@ -21,8 +21,8 @@
         "$mod, RETURN, exec, kitty"
       ];
     };
-
-    services.dunst.enable = true;
-    programs.kitty.enable = true;
   };
+
+  services.dunst.enable = true;
+  programs.kitty.enable = true;
 }
