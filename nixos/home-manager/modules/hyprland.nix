@@ -11,18 +11,18 @@
         kb_options = "grp:alt_shift_toggle";
         follow_mouse = 1;
         touchpad = {
-          natural_scroll = false;
+          natural_scroll = true;
         };
       };
 
       "$mod" = "SUPER";
  
       bind = [
-        "$mod, RETURN, exec, kitty"
+        "$mod, RETURN, exec, alacritty"
       ];
     };
   };
 
   services.dunst.enable = true;
-  programs.kitty.enable = true;
+  programs.alacritty.enable = true;
 }
