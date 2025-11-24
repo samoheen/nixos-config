@@ -6,12 +6,12 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }: let
+    { nixpkgs, home-manager, ... }@inputs: let
       system = "x86_64-linux";
       stateVersion = "25.05";
       user = "sam";
       hosts = [
-        { hostName = "zenbook" }
+        { hostName = "zenbook"; }
       ];
 
       makeSystem = { hostName }: nixpkgs.lib.nixosSystem {
@@ -28,7 +28,7 @@
       nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
         configs // {
           "${host.hostName}" = makeSystem {
-            inherit (host) hostName stateVersion;
+            inherit (host) hostName;
           };
         }) {} hosts;
 

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, stateVersion, hostName, ... }:
 
 {
   imports = [
@@ -18,7 +18,7 @@
   };
   
   networking = {
-    hostName = "zenbook";
+    hostName = hostName;
     networkmanager = {
       enable = true;
     };
@@ -40,6 +40,6 @@
     htop
   ];
 
-  system.stateVersion = "25.05";
+  system.stateVersion = stateVersion;
 }
 
