@@ -1,4 +1,4 @@
-{ pkgs, stateVersion, hostName, ... }:
+{ pkgs, stateVersion, hostName, user, ... }:
 
 {
   imports = [
@@ -6,12 +6,16 @@
     ../../modules
   ];
 
-  services.displayManager.ly = {
+  services.greetd = {
     enable = true;
-    extraConfig = ''
-      [keyboard]
-      layout = us
-    '';
+    settings = {
+      command = "Hyprland";
+      user = "${user}";
+    };
+    default_session = {
+      command = "{${pkgs.greetd.tuigreet}/bin/tuigreet} --greeting 'Welcome to NixOS' --asterisks --remember --remember-user-session --time -cmd Hyprland ";
+      user = "greeter";
+    };
   };
 
   programs.hyprland = {
