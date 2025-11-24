@@ -4,7 +4,7 @@
   boot = {
     loader = {
       systemd-boot.enable = true;
-      efi.catTouchEfiVariables = true;
+      efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages_latest;
   };
