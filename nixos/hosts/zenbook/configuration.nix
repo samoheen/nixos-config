@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ../../modules
   ];
-:
+
   environment.systemPackages = with pkgs; [
     git
     vim
