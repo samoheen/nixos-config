@@ -35,7 +35,7 @@
 
         "SUPER_SHIFT, RETURN, exec, alacritty"
         "SUPER_SHIFT, Z, exec, zen"
-        "SUPER_SHIFT, X, exec, ranger"
+        "SUPER_SHIFT, X, exec, alacritty -e sh -c 'ranger ~'"
 
         "SUPER,       LEFT, movefocus, l"
         "SUPER,       RIGHT, movefocus, r"
@@ -68,5 +68,4 @@
   };
 
   services.dunst.enable = true;
-  programs.alacritty.enable = true;
 }

@@ -1,5 +1,7 @@
 {
   imports = [
+    ./alacritty.nix
+    ./aseprite.nix
     ./git.nix
     ./hyprland.nix
     ./ranger.nix
