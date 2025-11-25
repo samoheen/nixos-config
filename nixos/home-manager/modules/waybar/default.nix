@@ -15,6 +15,7 @@
           show-special = true;
           special-visible-only = true;
           all-outputs = false;
+          format = "[{id}]";
         };
 
         "hyprland/language" = {
@@ -24,7 +25,7 @@
         };
 
         "battery" = {
-          format = "[{capacity}]";
+          format = "[{capacity}%]";
         };
 
         "clock" = {
