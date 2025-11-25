@@ -44,6 +44,7 @@
     vim
     wget
     htop
+    zsh
 
     waybar
     rofi-wayland
