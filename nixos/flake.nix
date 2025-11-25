@@ -5,6 +5,10 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -22,6 +26,7 @@
           inherit inputs stateVersion hostName user;
         };
         modules = [
+          stylix.nixosModules.stylix
           ./hosts/${hostName}/configuration.nix
 
           home-manager.nixosModules.home-manager
