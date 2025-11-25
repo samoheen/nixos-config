@@ -7,7 +7,8 @@
         position = "top";
         height = 30;
         modules-left = [ "hyprland/workspaces" ];
-        modules-right = [ "clock" ];
+        modules-center = [ "hyprland/window" ];
+        modules-right = [ "hyprland/language" "battery"  "clock" ];
       };
     };
   };
