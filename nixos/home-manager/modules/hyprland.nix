@@ -6,7 +6,14 @@
     settings = {
       monitor = ",preferred,auto,auto";
 
-      gaps_out = 0;
+      general = {
+        gaps_in = 0;
+        gaps_out = 0;
+      };
+
+      animations = {
+        enabled = false;
+      };
 
       input = {
         kb_layout = "us,ru";
