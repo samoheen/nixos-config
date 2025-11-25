@@ -6,6 +6,8 @@
     settings = {
       monitor = ",preferred,auto,auto";
 
+      gaps_out = 0;
+
       input = {
         kb_layout = "us,ru";
         kb_options = "grp:alt_shift_toggle";
