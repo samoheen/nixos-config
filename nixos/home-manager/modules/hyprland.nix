@@ -7,9 +7,9 @@
     settings = {
       monitor = ",preferred,auto,auto";
 
-      exec-once = {
+      exec-once = [
         "waybar"
-      };
+      ];
 
       general = {
         gaps_in = 0;
