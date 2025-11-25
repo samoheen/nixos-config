@@ -17,16 +17,16 @@
           all-outputs = false;
           format = "{icon}";
           format-icons = {
-            "1" = "Ⅰ";
-            "2" = "Ⅱ";
-            "3" = "Ⅲ";
-            "4" = "Ⅳ";
-            "5" = "Ⅴ";
-            "6" = "Ⅵ";
-            "7" = "Ⅶ";
-            "8" = "Ⅷ";
-            "9" = "Ⅸ";
-            "magic" = "Ⅹ";
+            "1" = "I";
+            "2" = "II";
+            "3" = "III";
+            "4" = "IV";
+            "5" = "V";
+            "6" = "VI";
+            "7" = "VII";
+            "8" = "VIII";
+            "9" = "IX";
+            "magic" = "X";
           };
         };
 
@@ -38,7 +38,7 @@
 
         "battery" = {
           format = "[{capacity}%]";
-          format-charging = "[⚡{capacity%}]";
+          format-charging = "[⚡{capacity}%]";
         };
 
         "clock" = {
