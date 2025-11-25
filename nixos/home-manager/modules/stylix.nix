@@ -8,7 +8,7 @@
     noto-fonts
     noto-fonts-lgc-plus
     noto-fonts-emoji
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+    # (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
   ];
 
   stylix = {
