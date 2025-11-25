@@ -2,6 +2,7 @@
   imports = [
     ./git.nix
     ./hyprland.nix
+    ./ranger.nix
     ./starship.nix
     ./stylix.nix
     ./waybar
