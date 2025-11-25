@@ -20,6 +20,7 @@
       bind = [
         "$mod, Q, killactive,"
         "$mod, RETURN, exec, alacritty"
+        "$mod, SHIFT, Z, exec, zen"
       ];
     };
   };
