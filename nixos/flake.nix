@@ -26,7 +26,6 @@
           inherit inputs stateVersion hostName user;
         };
         modules = [
-          stylix.nixosModules.stylix
           ./hosts/${hostName}/configuration.nix
 
           home-manager.nixosModules.home-manager

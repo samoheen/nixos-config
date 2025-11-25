@@ -7,7 +7,5 @@
     fastfetch
     unzip
     zip
-
-    nerdfonts
   ];
 }
