@@ -9,6 +9,9 @@
   home = {
     username = user;
     homeDirectory = "/home/${user}";
+    sessionVariables = {
+      SHELL = "${pkgs.zsh}/bin/zsh"
+    };
     stateVersion = stateVersion;
   };
 }
