@@ -15,7 +15,7 @@
   stylix = {
     enable = true;
     polarity = "dark";
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base24-schemes}/share/themes/catppuccin-mocha.yaml";
    
     cursor = {
       name = "DMZ-Black";
