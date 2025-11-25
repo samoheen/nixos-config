@@ -7,11 +7,6 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    ohMyZsh = {
-      enable = true;
-      plugins = [ "git" "history" ];
-    };
-
     shellAliases =
       let
         flakeDir = "~/.nixos-config/nixos";
