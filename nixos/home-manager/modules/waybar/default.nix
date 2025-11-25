@@ -38,7 +38,7 @@
 
         "battery" = {
           format = "[{capacity}%]";
-          format-charging = "[⚡{capacity%}]"
+          format-charging = "[⚡{capacity%}]";
         };
 
         "clock" = {
