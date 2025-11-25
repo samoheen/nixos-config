@@ -15,7 +15,19 @@
           show-special = true;
           special-visible-only = true;
           all-outputs = false;
-          format = "[{id}]";
+          format = "{icon}";
+          format-icons = {
+            "1" = "Ⅰ";
+            "2" = "Ⅱ";
+            "3" = "Ⅲ";
+            "4" = "Ⅳ";
+            "5" = "Ⅴ";
+            "6" = "Ⅵ";
+            "7" = "Ⅶ";
+            "8" = "Ⅷ";
+            "9" = "Ⅸ";
+            "magic" = "Ⅹ";
+          };
         };
 
         "hyprland/language" = {
@@ -26,10 +38,11 @@
 
         "battery" = {
           format = "[{capacity}%]";
+          format-charging = "[⚡{capacity%}]"
         };
 
         "clock" = {
-          format = "[{:%d.%m.%Y - %H:%M}]";
+          format = "[{:%d.%m.%Y] [%H:%M}]";
         };
       };
     };
