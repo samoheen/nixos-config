@@ -7,5 +7,7 @@
     fastfetch
     unzip
     zip
+
+    aseprite
   ];
 }
