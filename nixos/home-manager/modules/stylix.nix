@@ -8,6 +8,7 @@
     noto-fonts
     noto-fonts-lgc-plus
     noto-fonts-emoji
+    fira-code
     # (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
   ];
 
@@ -28,8 +29,8 @@
         package = pkgs.noto-fonts-color-emoji;
       };
       monospace = {
-        name = "Noto Sans Mono";
-        package = pkgs.noto-fonts;
+        name = "Fira Code";
+        package = pkgs.fira-code;
       };
       sansSerif = {
         name = "Noto Sans";
