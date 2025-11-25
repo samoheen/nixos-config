@@ -18,6 +18,7 @@
       "$mod" = "SUPER";
  
       bind = [
+        "$mod, Q, killactive,"
         "$mod, RETURN, exec, alacritty"
       ];
     };
