@@ -4,12 +4,12 @@
     systemd.enable = true;
     xwayland.enable = true;
 
-    exec-once = [
-      "waybar"
-    ];
-
     settings = {
       monitor = ",preferred,auto,auto";
+
+      exec-once = {
+        "waybar"
+      };
 
       general = {
         gaps_in = 0;
