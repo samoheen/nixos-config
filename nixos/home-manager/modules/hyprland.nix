@@ -1,7 +1,12 @@
 {
   wayland.windowManager.hyprland = {
     enable = true;
+    systemd.enable = true;
     xwayland.enable = true;
+
+    exec-once = [
+      "waybar"
+    ];
 
     settings = {
       monitor = ",preferred,auto,auto";
