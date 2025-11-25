@@ -33,9 +33,10 @@
         "SUPER_SHIFT, Q, exit,"
         "SUPER_SHIFT, C, killactive,"
 
-        "SUPER_SHIFT, RETURN, exec, alacritty"
+        "SUPER_SHIFT, A, exec, alacritty"
         "SUPER_SHIFT, Z, exec, zen"
         "SUPER_SHIFT, X, exec, alacritty -e sh -c 'ranger ~'"
+        "SUPER_SHIFT, S, exec, aseprite"
 
         "SUPER,       LEFT, movefocus, l"
         "SUPER,       RIGHT, movefocus, r"
