@@ -2,9 +2,10 @@
 
 {
   users = {
-    defaultUserShell = pkgs.zsh;
     users.${user} = {
       isNormalUser = true;
+      shell = pkgs.zsh;
+      ignoreShellProgramCheck = true;
       extraGroups = [ "wheel" "networkmanager" ];
     };
   };
