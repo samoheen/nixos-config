@@ -15,12 +15,10 @@
         };
       };
 
-      "$mod" = "SUPER";
- 
       bind = [
-        "$mod, Q, killactive,"
-        "$mod, RETURN, exec, alacritty"
-        "$mod, SHIFT, Z, exec, zen"
+        "SUPER, Q, killactive,"
+        "SUPER, RETURN, exec, alacritty"
+        "SUPER_SHIFT, Z, exec, zen"
       ];
     };
   };
