@@ -24,7 +24,7 @@
         };
 
         "battery" = {
-          format = "[{capacity}]"
+          format = "[{capacity}]";
         };
 
         "clock" = {
