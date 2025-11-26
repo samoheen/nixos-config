@@ -30,6 +30,9 @@
       catppuccin-nvim
 
       neo-tree-nvim
+      plenary-nvim
+      nui-nvim
+      nvim-web-devicons
     ];
 
     extraConfigLua = ''

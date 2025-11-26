@@ -6,6 +6,8 @@
     ../../modules
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   services.greetd = {
     enable = true;
     settings = {

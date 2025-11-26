@@ -1,6 +1,8 @@
 {
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-25.05";
+    };
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
@@ -25,8 +27,11 @@
     inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }:
     let
       system = "x86_64-linux";
+      
       stateVersion = "25.05";
+      
       user = "sam";
+      
       hosts = [
         { hostName = "zenbook"; }
       ];
@@ -53,11 +58,8 @@
 
           home-manager.nixosModules.home-manager
           {
-            # home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            
+            home-manager.useGlobalPkgs = true;            
             home-manager.users.${user} = import ./home-manager/home.nix;
-
             home-manager.extraSpecialArgs = {
               inherit inputs stateVersion user;
             };
@@ -66,6 +68,7 @@
       };
 
     in {
+      nixpkgs.config.allowUnfree = true;
       nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
         configs // {
           "${host.hostName}" = makeSystem {

@@ -10,6 +10,8 @@
     noto-fonts-lgc-plus
     noto-fonts-emoji
 
+    fira-code
+
     nerd-fonts.fira-code
   ];
 
@@ -30,7 +32,7 @@
         package = pkgs.noto-fonts-color-emoji;
       };
       monospace = {
-        name = "Fira Code";
+        name = "FiraCode";
         package = pkgs.nerd-fonts.fira-code;
       };
       sansSerif = {
