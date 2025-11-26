@@ -39,7 +39,7 @@
         "SUPER_SHIFT, X, exec, alacritty -e sh -c 'ranger ~'"
         "SUPER_SHIFT, S, exec, aseprite"
 
-        ",            PRINT, exec, grimblast --notify --freeze copysave area"
+        ",            PRINT, exec, grimblast save screen /tmp/screen.png"
 
         "SUPER,       LEFT, movefocus, l"
         "SUPER,       RIGHT, movefocus, r"

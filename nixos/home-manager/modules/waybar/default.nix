@@ -1,6 +1,7 @@
 {
   programs.waybar = {
     enable = true;
+    # style = ./style.css;
     settings = {
       mainBar = {
         layer = "top";
@@ -37,13 +38,13 @@
         };
         
         "pulseaudio" = {
-          format = "{volume}.s";
-          format-muted = "mut.s";
+          format = "vol {volume}";
+          format-muted = "mut";
         };
 
         "battery" = {
-          format = "{capacity}.b";
-          format-charging = "{capacity}!.b";
+          format = "bat {capacity}";
+          format-charging = "bat {capacity}!";
         };
 
         "clock" = {

@@ -1,0 +1,12 @@
+#workspaces button {
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+#workspaces button.active::before {
+    content: "[";
+}
+
+#workspaces button.active::after {
+    content: "]";
+}
