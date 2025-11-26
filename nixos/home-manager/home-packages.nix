@@ -9,5 +9,8 @@
     zip
 
     aseprite
+
+    nixpkgs-unstable.rustup
+    nixpkgs-unstable.go
   ];
 }
