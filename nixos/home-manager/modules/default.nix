@@ -3,6 +3,7 @@
     ./alacritty.nix
     ./git.nix
     ./hyprland.nix
+    ./nixvim.nix
     ./ranger.nix
     ./starship.nix
     ./stylix.nix
