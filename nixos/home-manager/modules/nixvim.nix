@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.nixvim = {
     enable = true;
@@ -6,7 +8,7 @@
       relativenumber = true;
       shiftWidth = 4;
     };
-    extraPlugins = with pkgs.vimPlugins [
+    extraPlugins = with pkgs.vimPlugins; [
       vim-nix
     ];
   };
