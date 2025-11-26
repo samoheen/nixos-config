@@ -5,13 +5,32 @@
 
   programs.nixvim = {
     enable = true;
+
     opts = {
       number = true;
       relativenumber = true;
-      shiftWidth = 4;
+      shiftwidth = 4;
+      tabstop = 4;
+      expandtab = true;
+      smartindent = true;
+      backup = false;
+      termguicolors = true;      
     };
+
     extraPlugins = with pkgs.vimPlugins; [
       vim-nix
+
+      catppuccin-nvim
     ];
+
+    extraConfigLua = ''
+      -- cattpuccin
+      require("catppuccin").setup({
+        flavour = "mocha",
+        transparent_background = false,
+      })
+    '';
+
+    colorscheme = "catppuccin";
   };
 }
