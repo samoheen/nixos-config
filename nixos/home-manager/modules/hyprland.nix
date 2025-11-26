@@ -34,6 +34,9 @@
       bind = [
         "SUPER_SHIFT, Q, killactive,"
 
+        "SUPER,       ESCAPE, exec, systemctl poweroff"
+        "SUPER_SHIFT, ESCAPE, exec, systemctl reboot"
+
         "SUPER_SHIFT, A, exec, alacritty"
         "SUPER_SHIFT, Z, exec, zen"
         "SUPER_SHIFT, X, exec, alacritty -e sh -c 'ranger ~'"
