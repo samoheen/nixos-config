@@ -20,7 +20,7 @@
     keymaps = [
       {
         key = "<leader>f";
-        action = "<cmd>Neotree<cr>";
+        action = "<cmd>Neotree toggle<cr>";
         mode = "n";
         options.desc = "Open file tree";
       }
