@@ -20,7 +20,9 @@
     keymaps = [
       {
         key = "<leader>f";
-        telescope = "<cmd>Neotree<cr>";
+        action = "<cmd>Neotree<cr>";
+        mode = "n";
+        options.desc = "Open file tree";
       }
     ];
 
