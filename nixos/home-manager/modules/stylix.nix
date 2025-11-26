@@ -5,11 +5,12 @@
 
   home.packages = with pkgs; [
     dejavu_fonts
+    
     noto-fonts
     noto-fonts-lgc-plus
     noto-fonts-emoji
-    fira-code
-    # (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
+
+    nerd-fonts.fira-code
   ];
 
   stylix = {
@@ -30,7 +31,7 @@
       };
       monospace = {
         name = "Fira Code";
-        package = pkgs.fira-code;
+        package = pkgs.nerd-fonts.fira-code;
       };
       sansSerif = {
         name = "Noto Sans";
