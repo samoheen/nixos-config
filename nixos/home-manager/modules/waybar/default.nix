@@ -8,7 +8,7 @@
         height = 30;
         modules-left = [ "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "hyprland/language" "battery" "clock" ];
+        modules-right = [ "hyprland/language" "pulseaudio" "battery" "clock" ];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -35,14 +35,19 @@
           format-ru = "ru";
           tooltip = false;
         };
+        
+        "pulseaudio" = {
+          format = "{volume}.s";
+          format-muted = "mut.s";
+        };
 
         "battery" = {
-          format = "{capacity}%";
-          format-charging = "{capacity}!%";
+          format = "{capacity}.b";
+          format-charging = "{capacity}!.b";
         };
 
         "clock" = {
-          format = "{:%d.%m %H:%M}";
+          format = "{:%a %b %d %H:%M}";
         };
       };
     };

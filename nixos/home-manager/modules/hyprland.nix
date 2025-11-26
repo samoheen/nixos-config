@@ -32,13 +32,14 @@
       };
 
       bind = [
-        "SUPER_SHIFT, Q, exit,"
-        "SUPER_SHIFT, C, killactive,"
+        "SUPER_SHIFT, Q, killactive,"
 
         "SUPER_SHIFT, A, exec, alacritty"
         "SUPER_SHIFT, Z, exec, zen"
         "SUPER_SHIFT, X, exec, alacritty -e sh -c 'ranger ~'"
         "SUPER_SHIFT, S, exec, aseprite"
+
+        ",            PRINT, exec, grimblast --notify --freeze copysave area"
 
         "SUPER,       LEFT, movefocus, l"
         "SUPER,       RIGHT, movefocus, r"
@@ -67,6 +68,13 @@
         "SUPER_SHIFT, 9, movetoworkspacesilent, 9"
         "SUPER_SHIFT, 0, movetoworkspacesilent, 10"
       ];
+
+      bindel = [
+        ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ",XF86AudioMute,        exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioMicMute,     exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+      ];
     };
   };
   
@@ -74,10 +82,10 @@
     enable = true;
     settings = {
       preload = [
-        "/home/${user}/.config/wallpapers/1.png"
+        "/home/${user}/.config/wallpapers/2.png"
       ];
       wallpaper = [
-        ",/home/${user}/.config/wallpapers/1.png"
+        ",/home/${user}/.config/wallpapers/2.png"
       ];
     };
   };

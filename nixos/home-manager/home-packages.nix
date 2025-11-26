@@ -8,6 +8,8 @@
     unzip
     zip
 
+    grimblast
+
     aseprite
   ];
 }
