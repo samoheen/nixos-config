@@ -15,6 +15,11 @@
         ga = "git add";
         gc = "git commit";
         gp = "git push";
+        v = "nvim";
+        cn = "cargo new";
+        cb = "cargo build";
+        cr = "cargo run";
+        ct = "cargo test";
       };
 
     history.size = 10000;
