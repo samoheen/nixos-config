@@ -73,8 +73,11 @@
   services.hyprpaper = {
     enable = true;
     settings = {
+      preload = [
+        "/home/${user}/.config/wallpapers/1.png"
+      ];
       wallpaper = [
-        "monitor,/home/${user}/.config/wallpapers/1.png"
+        ",/home/${user}/.config/wallpapers/1.png"
       ];
     };
   };
