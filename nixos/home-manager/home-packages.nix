@@ -9,6 +9,7 @@
     zip
 
     grimblast
+    hyprlock
 
     aseprite
   ];

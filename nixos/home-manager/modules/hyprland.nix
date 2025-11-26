@@ -36,6 +36,7 @@
 
         "SUPER,       ESCAPE, exec, systemctl poweroff"
         "SUPER_SHIFT, ESCAPE, exec, systemctl reboot"
+        "SUPER_ALT,   ESCAPE, exec, hyprlock"
 
         "SUPER_SHIFT, A, exec, alacritty"
         "SUPER_SHIFT, Z, exec, zen"
