@@ -54,6 +54,10 @@
     grim
     slurp
     wl-clipboard
+
+    unstable.rustup
+    unstable.go
+    unstable.clang
   ];
 
   system.stateVersion = stateVersion;

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -9,8 +9,5 @@
     zip
 
     aseprite
-
-    nixpkgs-unstable.rustup
-    nixpkgs-unstable.go
   ];
 }

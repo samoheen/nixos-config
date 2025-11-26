@@ -54,4 +54,6 @@
       light = "Papirus-Light";
     };
   };
+
+  image = ~/.config/wallpapers/1.png;
 }

@@ -22,13 +22,25 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }: let
+    inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }:
+    let
       system = "x86_64-linux";
       stateVersion = "25.05";
       user = "sam";
       hosts = [
         { hostName = "zenbook"; }
       ];
+
+      unstable-overlays = {
+        nixpkgs.overlays = [
+          (final: prev: {
+            unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+          })
+        ];
+      };
 
       makeSystem = { hostName }: nixpkgs.lib.nixosSystem {
         system = system;
@@ -37,6 +49,7 @@
         };
         modules = [
           ./hosts/${hostName}/configuration.nix
+          unstable-overlays
 
           home-manager.nixosModules.home-manager
           {
