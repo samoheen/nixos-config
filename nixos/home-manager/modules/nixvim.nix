@@ -17,8 +17,17 @@
       termguicolors = true;      
     };
 
+    keymaps = [
+      {
+        key = "<leader>f";
+        telescope = "<cmd>Neotree<cr>";
+      }
+    ];
+
     extraPlugins = with pkgs.vimPlugins; [
       catppuccin-nvim
+
+      neo-tree-nvim
     ];
 
     extraConfigLua = ''
@@ -30,5 +39,9 @@
     '';
 
     colorscheme = "catppuccin";
+
+    globals = {
+        mapleader = " ";
+    };
   };
 }
