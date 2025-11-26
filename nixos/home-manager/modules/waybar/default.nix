@@ -15,7 +15,7 @@
           show-special = true;
           special-visible-only = true;
           all-outputs = false;
-          format = "{icon}";
+          format = "{id}";
           format-icons = {
             "1" = "I";
             "2" = "II";
@@ -37,8 +37,8 @@
         };
 
         "battery" = {
-          format = "🔋 {capacity}%";
-          format-charging = "⚡🔋 {capacity}%";
+          format = "{capacity}%";
+          format-charging = "{capacity}!%";
         };
 
         "clock" = {
