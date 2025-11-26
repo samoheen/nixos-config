@@ -1,3 +1,5 @@
+{ user, ... }:
+
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -67,6 +69,15 @@
       ];
     };
   };
-
+  
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      wallpaper = [
+        "monitor,/home/${user}/.config/wallpapers/1.png"
+      ];
+    };
+  };
+  
   services.dunst.enable = true;
 }

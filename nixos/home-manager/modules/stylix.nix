@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, user, ... }:
 
 {
   imports = [ inputs.stylix.homeModules.stylix ];
@@ -53,7 +53,6 @@
       dark = "Papirus-Dark";
       light = "Papirus-Light";
     };
-  };
 
-  image = ~/.config/wallpapers/1.png;
+  };
 }
