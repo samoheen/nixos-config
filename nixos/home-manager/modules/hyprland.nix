@@ -37,6 +37,7 @@
         "SUPER_SHIFT, X, exec, alacritty -e sh -c 'ranger ~'"
         "SUPER_SHIFT, S, exec, aseprite"
         "SUPER_SHIFT, T, exec, telegram-desktop"
+        "SUPER_SHIFT, O, exec, obsidian"
 
         ",            PRINT, exec, grimblast save screen /tmp/screen.png"
 

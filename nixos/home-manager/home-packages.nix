@@ -19,5 +19,7 @@
     nixd
 
     telegram-desktop
+
+    obsidian
   ];
 }
