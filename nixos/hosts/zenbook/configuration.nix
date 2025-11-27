@@ -53,6 +53,8 @@
     slurp
     wl-clipboard
 
+    hysteria
+
     unstable.rustup
     unstable.go
     unstable.clang

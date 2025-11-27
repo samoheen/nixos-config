@@ -7,9 +7,16 @@
         layer = "top";
         position = "top";
         height = 30;
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "hyprland/window" ];
-        modules-right = [ "hyprland/language" "pulseaudio" "battery" "clock" ];
+        modules-left = [ "hyprland/workspaces" "hyprland/window" ];
+        modules-center = [ ];
+        modules-right = [
+          "hyprland/language"
+          "network"
+          "backlight"
+          "pulseaudio"
+          "battery"
+          "clock"
+        ];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -36,7 +43,16 @@
           format-ru = "ru";
           tooltip = false;
         };
-        
+
+        "network" = {
+          interface = "wlp1s0";
+          format = "{ifname}";
+          format-wifi = "net {signalStrength}";
+          format-disconnected = "dis";
+        };
+
+        "backlight" = { format = "brt {percent}"; };
+
         "pulseaudio" = {
           format = "vol {volume}";
           format-muted = "mut";
@@ -47,9 +63,7 @@
           format-charging = "bat {capacity}!";
         };
 
-        "clock" = {
-          format = "{:%a %b %d %H:%M}";
-        };
+        "clock" = { format = "{:%a %b %d %H:%M}"; };
       };
     };
   };

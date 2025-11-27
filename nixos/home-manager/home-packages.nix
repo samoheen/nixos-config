@@ -13,6 +13,7 @@
     fzf
     ffmpeg
     ffmpegthumbnailer
+    brightnessctl
 
     nixfmt-rfc-style
     nixd
