@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -16,5 +16,7 @@
 
     nixfmt-rfc-style
     nixd
+
+    telegram-desktop
   ];
 }

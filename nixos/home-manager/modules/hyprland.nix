@@ -9,26 +9,20 @@
     settings = {
       monitor = ",preferred,auto,auto";
 
-      exec-once = [
-        "waybar"
-      ];
+      exec-once = [ "waybar" ];
 
       general = {
         gaps_in = 0;
         gaps_out = 0;
       };
 
-      animations = {
-        enabled = false;
-      };
+      animations = { enabled = false; };
 
       input = {
         kb_layout = "us,ru";
         kb_options = "grp:alt_shift_toggle";
         follow_mouse = 1;
-        touchpad = {
-          natural_scroll = true;
-        };
+        touchpad = { natural_scroll = true; };
       };
 
       bind = [
@@ -42,6 +36,7 @@
         "SUPER_SHIFT, Z, exec, zen"
         "SUPER_SHIFT, X, exec, alacritty -e sh -c 'ranger ~'"
         "SUPER_SHIFT, S, exec, aseprite"
+        "SUPER_SHIFT, T, exec, telegram-desktop"
 
         ",            PRINT, exec, grimblast save screen /tmp/screen.png"
 
@@ -81,18 +76,14 @@
       ];
     };
   };
-  
+
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [
-        "/home/${user}/.config/wallpapers/2.png"
-      ];
-      wallpaper = [
-        ",/home/${user}/.config/wallpapers/2.png"
-      ];
+      preload = [ "/home/${user}/.config/wallpapers/2.png" ];
+      wallpaper = [ ",/home/${user}/.config/wallpapers/2.png" ];
     };
   };
-  
+
   services.dunst.enable = true;
 }
