@@ -2,6 +2,7 @@
   imports = [
     ./alacritty.nix
     ./git.nix
+    ./helix.nix
     ./hyprland.nix
     ./nixvim.nix
     ./ranger.nix

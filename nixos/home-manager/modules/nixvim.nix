@@ -21,10 +21,34 @@
 
     keymaps = [
       {
-        key = "<leader>f";
+        key = "<leader>e";
         action = "<cmd>Neotree toggle<cr>";
         mode = "n";
-        options.desc = "Open file tree";
+        options.desc = "Toggle Neotree";
+      }
+      {
+        key = "<leader>o";
+        action = "<cmd>Neotree focus<cr>";
+        mode = "n";
+        options.desc = "Focus Neotree";
+      }
+      {
+        key = "<leader>qq";
+        action = "<cmd>qa<cr>";
+        mode = "n";
+        options.desc = "Close all files";
+      }
+      {
+        key = "<leader>ww";
+        action = "<cmd>wa<cr>";
+        mode = "n";
+        options.desc = "Save all files";
+      }
+      {
+        key = "<leader>wq";
+        action = "<cmd>wqa<cr>";
+        mode = "n";
+        options.desc = "Save and close all files";
       }
     ];
 
@@ -57,6 +81,30 @@
     ];
 
     extraConfigLua = ''
+      require('neo-tree').setup({
+        close_if_last_window = true,
+        window = {
+          mappings = {
+            ['<cr>'] = "open",
+            ['l'] = "open",
+            ['h'] = "close_node",
+            ['<Tab>'] = "focus_preview",
+            ['P'] = { "toggle_preview", config = { use_float = true } },
+          }
+        },
+        filesystem = {
+          filtered_items = {
+            visible = true,
+            hide_dotfiles = false,
+            hide_gitignored = false,
+          },
+          follow_current_file = {
+            enabled = true,
+          },
+        }
+      })
+
+
       local lspconfig = require('lspconfig')
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -82,6 +130,15 @@
             require('luasnip').lsp_expand(args.body)
           end,
         },
+        mapping = cmp.mapping.preset.insert({
+          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+          ['<C-f>'] = cmp.mapping.scroll_docs(-4),
+          ['<C-Space>'] = cmp.mapping.complete(),
+          ['<C-e>'] = cmp.mapping.abort(),
+          ['<CR>'] = cmp.mapping.confirm({ select = true }),
+          ['<Tab>'] = cmp.mapping.select_next_item(),
+          ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+        });
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },

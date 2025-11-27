@@ -13,5 +13,6 @@
     fzf
     ffmpeg
     ffmpegthumbnailer
-  ];
+    vscode
+   ];
 }
