@@ -1,11 +1,11 @@
-{ pkgs, inputs, user, ... }:
+{ pkgs, stylix, ... }:
 
 {
-  imports = [ inputs.stylix.homeModules.stylix ];
+  imports = [ stylix.homeModules.stylix ];
 
   home.packages = with pkgs; [
     dejavu_fonts
-    
+
     noto-fonts
     noto-fonts-lgc-plus
     noto-fonts-emoji
@@ -19,7 +19,7 @@
     enable = true;
     polarity = "dark";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-   
+
     cursor = {
       name = "DMZ-Black";
       size = 24;

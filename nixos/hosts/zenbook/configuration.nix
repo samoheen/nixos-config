@@ -1,12 +1,7 @@
-{ pkgs, stateVersion, hostName, user, ... }:
+{ pkgs, stateVersion, user, ... }:
 
 {
-  imports = [
-    ./hardware-configuration.nix
-    ../../modules
-  ];
-
-  nixpkgs.config.allowUnfree = true;
+  imports = [ ./hardware-configuration.nix ../../modules ];
 
   services.greetd = {
     enable = true;
@@ -16,7 +11,8 @@
         user = "${user}";
       };
       default_session = {
-        command = "{${pkgs.greetd.tuigreet}/bin/tuigreet} --greeting 'Welcome to NixOS' --asterisks --remember --remember-user-session --time -cmd Hyprland ";
+        command =
+          "{${pkgs.greetd.tuigreet}/bin/tuigreet} --greeting 'Welcome to NixOS' --asterisks --remember --remember-user-session --time -cmd Hyprland ";
         user = "greeter";
       };
     };
@@ -52,7 +48,7 @@
     rofi-wayland
     dunst
     kitty
- 
+
     grim
     slurp
     wl-clipboard

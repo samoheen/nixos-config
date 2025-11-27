@@ -1,7 +1,7 @@
-{ pkgs, inputs, ... }:
+{ pkgs, nixvim, ... }:
 
 {
-  imports = [ inputs.nixvim.homeModules.nixvim ];
+  imports = [ nixvim.homeModules.nixvim ];
 
   programs.nixvim = {
     enable = true;
@@ -151,7 +151,7 @@
       vim.g.lightline = {
         colorscheme = 'catppuccin',
       }
-      
+
       vim.diagnostic.config({ virtual_text = true })
 
       -- cattpuccin
@@ -163,8 +163,6 @@
 
     colorscheme = "catppuccin";
 
-    globals = {
-        mapleader = " ";
-    };
+    globals = { mapleader = " "; };
   };
 }

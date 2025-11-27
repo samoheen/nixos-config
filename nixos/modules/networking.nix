@@ -1,8 +1,6 @@
-{ hostName, ... }:
-
 {
   networking = {
-    hostName = hostName;
+    hostName = "zenbook";
     networkmanager.enable = true;
   };
 }

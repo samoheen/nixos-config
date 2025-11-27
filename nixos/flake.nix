@@ -1,8 +1,6 @@
 {
   inputs = {
-    nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-25.05";
-    };
+    nixpkgs = { url = "github:nixos/nixpkgs/nixos-25.05"; };
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
@@ -23,19 +21,16 @@
     };
   };
 
-  outputs =
-    inputs@{ nixpkgs, nixpkgs-unstable, home-manager, ... }:
+  outputs = { nixpkgs, nixpkgs-unstable, stylix, zen-browser, nixvim
+    , home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
-      
       stateVersion = "25.05";
-      
       user = "sam";
-      
-      hosts = [
-        { hostName = "zenbook"; }
-      ];
-
+      pkgs = import nixpkgs {
+        inherit system;
+        config = { allowUnfree = true; };
+      };
       unstable-overlays = {
         nixpkgs.overlays = [
           (final: prev: {
@@ -46,34 +41,32 @@
           })
         ];
       };
-
-      makeSystem = { hostName }: nixpkgs.lib.nixosSystem {
-        system = system;
-        specialArgs = {
-          inherit inputs stateVersion hostName user;
-        };
-        modules = [
-          ./hosts/${hostName}/configuration.nix
-          unstable-overlays
-
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;            
-            home-manager.users.${user} = import ./home-manager/home.nix;
-            home-manager.extraSpecialArgs = {
-              inherit inputs stateVersion user;
-            };
-          }
-        ];
+      specialArgs = {
+        inherit stateVersion;
+        # inherit pkgs;
+        inherit user;
+        inherit stylix;
+        inherit zen-browser;
+        inherit nixvim;
       };
-
     in {
-      nixpkgs.config.allowUnfree = true;
-      nixosConfigurations = nixpkgs.lib.foldl' (configs: host:
-        configs // {
-          "${host.hostName}" = makeSystem {
-            inherit (host) hostName;
-          };
-        }) {} hosts;
+      nixosConfigurations = {
+        zenbook = nixpkgs.lib.nixosSystem {
+          inherit pkgs;
+          system = system;
+          specialArgs = inputs // specialArgs;
+          modules = [
+            ./hosts/zenbook/configuration.nix
+            unstable-overlays
+            home-manager.nixosModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.${user} = ./home-manager/home.nix;
+              home-manager.extraSpecialArgs = inputs // specialArgs;
+            }
+          ];
+        };
+      };
     };
 }
