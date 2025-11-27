@@ -13,6 +13,8 @@
     fzf
     ffmpeg
     ffmpegthumbnailer
-    vscode
-   ];
+
+    nixfmt-rfc-style
+    nixd
+  ];
 }
