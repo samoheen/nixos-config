@@ -1,4 +1,4 @@
-{ user, ... }:
+{ lib, user, ... }:
 
 {
   wayland.windowManager.hyprland = {
@@ -14,6 +14,9 @@
       general = {
         gaps_in = 0;
         gaps_out = 0;
+
+        "col.active_border" = lib.mkForce
+          "rgba(f38ba888) rgba(fab38788) rgba(f9e2af88) rgba(a6e3a188) rgba(89dceb88) rgba(cba6f788) rgba(f5c2e788)";
       };
 
       animations = { enabled = false; };

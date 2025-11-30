@@ -3,16 +3,33 @@
 {
   imports = [ stylix.homeModules.stylix ];
 
+  # fonts.fontconfig.enable = true;
+  # fonts.packages = [
+
+  # pkgs.noto-fonts
+  # pkgs.noto-fonts-lgc-plus
+  # pkgs.noto-fonts-emoji
+
+  # pkgs.nerd-fonts.droid-sans-mono
+  # ];
+
   home.packages = with pkgs; [
-    dejavu_fonts
+    # dejavu_fonts
 
     noto-fonts
     noto-fonts-lgc-plus
     noto-fonts-emoji
 
-    fira-code
+    # fira-code
 
-    nerd-fonts.fira-code
+    # nerd-fonts.fira-code
+    # nerd-fonts.noto
+    nerd-fonts.ubuntu-mono
+    nerd-fonts.meslo-lg
+    nerd-fonts.roboto-mono
+    nerd-fonts.fira-mono
+    # nerd-fonts.fira-code
+    # nerd-fonts.dejavu-sans-mono
   ];
 
   stylix = {
@@ -22,7 +39,7 @@
 
     cursor = {
       name = "DMZ-Black";
-      size = 24;
+      size = 18;
       package = pkgs.vanilla-dmz;
     };
 
@@ -32,8 +49,8 @@
         package = pkgs.noto-fonts-color-emoji;
       };
       monospace = {
-        name = "FiraCode";
-        package = pkgs.nerd-fonts.fira-code;
+        name = "FiraMonoNerdFont";
+        package = pkgs.nerd-fonts.fira-mono;
       };
       sansSerif = {
         name = "Noto Sans";
