@@ -4,7 +4,7 @@
     enableZshIntegration = true;
     settings = {
       format = ''
-        $directory$c$cpp$go$rust$git_branch$git_status$character
+        $directory$c$cpp$cmake$go$rust$git_branch$git_status$character
       '';
       c = {
         format = "[$symbol]($style)";
@@ -19,6 +19,11 @@
       character = {
         success_symbol = "[א](bold fg:#a6e3a1)";
         error_symbol = "[א](bold fg:#f38ba8)";
+      };
+      cmake = {
+        format = "[$symbol]($style)";
+        symbol = "cmake ";
+        style = "fg:#74c7ec";
       };
       cmd_duration = { disabled = true; };
       directory = {
