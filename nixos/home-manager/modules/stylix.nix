@@ -74,8 +74,11 @@
       light = "Papirus-Light";
     };
 
+    targets.zen-browser.enable = true;
+
+    # FIXME Crashes home-manager
     # targets = {
-    # zen-browser.profileNames = [ "default" ];
+    # zen-browser.profileNames = [ "Profile0" ];
     # };
 
   };

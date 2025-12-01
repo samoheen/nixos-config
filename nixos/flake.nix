@@ -1,6 +1,8 @@
 {
   inputs = {
-    nixpkgs = { url = "github:nixos/nixpkgs/nixos-25.11"; };
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-25.11";
+    };
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -21,15 +23,25 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, stylix, zen-browser, nixvim
-    , home-manager, ... }@inputs:
+  outputs =
+    {
+      nixpkgs,
+      nixpkgs-unstable,
+      stylix,
+      zen-browser,
+      nixvim,
+      home-manager,
+      ...
+    }@inputs:
     let
       system = "x86_64-linux";
       stateVersion = "25.11";
       user = "sam";
       pkgs = import nixpkgs {
         inherit system;
-        config = { allowUnfree = true; };
+        config = {
+          allowUnfree = true;
+        };
       };
       unstable-overlays = {
         nixpkgs.overlays = [
@@ -49,7 +61,8 @@
         inherit zen-browser;
         inherit nixvim;
       };
-    in {
+    in
+    {
       nixosConfigurations = {
         zenbook = nixpkgs.lib.nixosSystem {
           inherit pkgs;
