@@ -21,5 +21,7 @@
     telegram-desktop
 
     obsidian
+
+    cmus
   ];
 }
