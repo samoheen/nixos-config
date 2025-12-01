@@ -98,19 +98,19 @@
         "network" = {
           interface = "wlp1s0";
           format = "{ifname}";
-          format-wifi = "   {signalStrength}";
+          format-wifi = "  {signalStrength}";
           format-disconnected = "dis";
         };
 
-        "backlight" = { format = "   {percent}"; };
+        "backlight" = { format = "  {percent}"; };
 
         "pulseaudio" = {
-          format = "   {volume}";
+          format = "  {volume}";
           format-muted = "";
         };
 
         "battery" = {
-          format = "   {capacity}";
+          format = "  {capacity}";
           format-charging = " {capacity}";
         };
 

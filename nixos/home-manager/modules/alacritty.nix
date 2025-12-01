@@ -1,1 +1,8 @@
-{ programs.alacritty = { enable = true; }; }
+{ lib, ... }:
+
+{
+  programs.alacritty = {
+    enable = true;
+    settings = { window.opacity = lib.mkForce 0.9; };
+  };
+}
