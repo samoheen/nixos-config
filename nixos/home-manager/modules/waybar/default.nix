@@ -48,6 +48,7 @@
       }
       #custom-nixos {
         color: #74c7ec;
+        font-weight: bold;
         padding: 0 12px 0 12px;
       }
     '';
@@ -55,8 +56,11 @@
       mainBar = {
         layer = "top";
         position = "top";
-        modules-left =
-          [ "custom/nixos" "hyprland/workspaces" "hyprland/window" ];
+        modules-left = [
+          "custom/nixos"
+          "hyprland/workspaces"
+          "hyprland/window"
+        ];
         modules-center = [ ];
         modules-right = [
           "hyprland/language"
@@ -87,7 +91,9 @@
           };
         };
 
-        "custom/nixos" = { format = " "; };
+        "custom/nixos" = {
+          format = "λ () ->";
+        };
 
         "hyprland/language" = {
           format-en = "en";
@@ -102,7 +108,9 @@
           format-disconnected = "dis";
         };
 
-        "backlight" = { format = "  {percent}"; };
+        "backlight" = {
+          format = "  {percent}";
+        };
 
         "pulseaudio" = {
           format = "  {volume}";
@@ -114,7 +122,9 @@
           format-charging = " {capacity}";
         };
 
-        "clock" = { format = "{:%a %b %d %H:%M}"; };
+        "clock" = {
+          format = "{:%a %b %d %H:%M}";
+        };
       };
     };
   };

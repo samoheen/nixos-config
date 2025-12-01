@@ -1,7 +1,15 @@
-{ pkgs, stateVersion, user, ... }:
+{
+  pkgs,
+  stateVersion,
+  user,
+  ...
+}:
 
 {
-  imports = [ ./hardware-configuration.nix ../../modules ];
+  imports = [
+    ./hardware-configuration.nix
+    ../../modules
+  ];
 
   services.greetd = {
     enable = true;
@@ -11,8 +19,7 @@
         user = "${user}";
       };
       default_session = {
-        command =
-          "{${pkgs.greetd.tuigreet}/bin/tuigreet} --greeting 'Welcome to NixOS' --asterisks --remember --remember-user-session --time -cmd Hyprland ";
+        command = "{${pkgs.tuigreet}/bin/tuigreet} --greeting 'Welcome to NixOS' --asterisks --remember --remember-user-session --time -cmd Hyprland ";
         user = "greeter";
       };
     };
@@ -20,7 +27,7 @@
 
   programs.hyprland = {
     enable = true;
-    xwayland.enable = true;
+    # xwayland.enable = true;
   };
 
   security.polkit.enable = true;
@@ -45,7 +52,7 @@
     zsh
 
     waybar
-    rofi-wayland
+    rofi
     dunst
     kitty
 
@@ -62,4 +69,3 @@
 
   system.stateVersion = stateVersion;
 }
-

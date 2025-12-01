@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
-    xwayland.enable = true;
+    # xwayland.enable = true;
 
     settings = {
       monitor = ",preferred,auto,auto";
@@ -15,17 +15,21 @@
         gaps_in = 0;
         gaps_out = 0;
 
-        "col.active_border" = lib.mkForce
-          "rgba(f38ba888) rgba(fab38788) rgba(f9e2af88) rgba(a6e3a188) rgba(89dceb88) rgba(cba6f788) rgba(f5c2e788)";
+        "col.active_border" =
+          lib.mkForce "rgba(f38ba888) rgba(fab38788) rgba(f9e2af88) rgba(a6e3a188) rgba(89dceb88) rgba(cba6f788) rgba(f5c2e788)";
       };
 
-      animations = { enabled = false; };
+      animations = {
+        enabled = false;
+      };
 
       input = {
         kb_layout = "us,ru";
         kb_options = "grp:alt_shift_toggle";
         follow_mouse = 1;
-        touchpad = { natural_scroll = true; };
+        touchpad = {
+          natural_scroll = true;
+        };
       };
 
       bind = [
@@ -39,7 +43,7 @@
         "SUPER_SHIFT, Z, exec, zen"
         "SUPER_SHIFT, X, exec, alacritty -e sh -c 'ranger ~'"
         "SUPER_SHIFT, S, exec, aseprite"
-        "SUPER_SHIFT, T, exec, telegram-desktop"
+        "SUPER_SHIFT, T, exec, Telegram"
         "SUPER_SHIFT, O, exec, obsidian"
 
         ",            PRINT, exec, grimblast save screen /tmp/screen.png"

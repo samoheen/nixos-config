@@ -18,7 +18,7 @@
 
     noto-fonts
     noto-fonts-lgc-plus
-    noto-fonts-emoji
+    noto-fonts-color-emoji
 
     # fira-code
 
@@ -73,6 +73,10 @@
       dark = "Papirus-Dark";
       light = "Papirus-Light";
     };
+
+    # targets = {
+    # zen-browser.profileNames = [ "default" ];
+    # };
 
   };
 }
