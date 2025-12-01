@@ -7,6 +7,7 @@
     username = user;
     homeDirectory = "/home/${user}";
     stateVersion = stateVersion;
+    sessionPath = [ "$HOME/.local/bin" ];
   };
 }
 
