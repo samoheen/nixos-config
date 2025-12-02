@@ -31,20 +31,23 @@
       #language {
         color: #f38ba8;
       }
-      #network {
+      #bluetooth {
         color: #eba0ac;
       }
-      #backlight {
+      #network {
         color: #fab387;
       }
-      #pulseaudio {
+      #backlight {
         color: #f9e2af;
       }
-      #battery {
+      #pulseaudio {
         color: #a6e3a1;
       }
-      #clock {
+      #battery {
         color: #94e2d5;
+      }
+      #clock {
+        color: #89dceb;
       }
       #custom-nixos {
         color: #74c7ec;
@@ -64,6 +67,7 @@
         modules-center = [ ];
         modules-right = [
           "hyprland/language"
+          "bluetooth"
           "network"
           "backlight"
           "pulseaudio"
@@ -99,6 +103,10 @@
           format-en = "en";
           format-ru = "ru";
           tooltip = false;
+        };
+
+        "bluetooth" = {
+          format = " {status}";
         };
 
         "network" = {

@@ -11,6 +11,9 @@
     ../../modules
   ];
 
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+
   services.greetd = {
     enable = true;
     settings = {
