@@ -20,8 +20,6 @@
 
     telegram-desktop
 
-    obsidian
-
     cmus
   ];
 }
